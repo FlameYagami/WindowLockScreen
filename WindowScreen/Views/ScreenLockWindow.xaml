@@ -1,0 +1,22 @@
+﻿<Window x:Class="WindowScreen.Views.ScreenLockWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WindowScreen.Views"
+        xmlns:prism="http://prismlibrary.com/"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        mc:Ignorable="d"
+        Title="ScreenLockWindow" Height="450" Width="800"
+        Top="0"
+        Left="0"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        AllowsTransparency="True"
+        Background="Transparent"
+        ShowInTaskbar="False"
+        >
+    <Grid>
+        <Button Width="100" Height="100" HorizontalAlignment="Right" VerticalAlignment="Top" Command="{Binding VerifyPasswordCommand}">关闭</Button>
+    </Grid>
+</Window>
