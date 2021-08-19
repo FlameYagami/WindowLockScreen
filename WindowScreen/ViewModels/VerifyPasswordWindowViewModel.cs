@@ -62,11 +62,8 @@ namespace WindowScreen.ViewModels
             {
                 return;
             }
-            Password = Password.Trim();
-
             
-            
-            if (Password != _setting.Password)
+            if (Password.Trim() != _setting.Password.Trim())
             {
                 Password = string.Empty;
                 PasswordTip = "密码输入错误";
@@ -78,7 +75,7 @@ namespace WindowScreen.ViewModels
             _keyboardHook.HookClear();
             TheScreenLockWindow.Close();
             TheVerifyPasswordWindow.Close();
-            if (_setting.Accident)
+            if (_setting.Accident && !_setting.StartUp)
             {
                 Helper.StartUpTheApp(false);
             }

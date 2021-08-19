@@ -24,7 +24,8 @@ namespace WindowScreen.Views
             Window window = Window.GetWindow(this);
             MainWindowViewModel vm = this.DataContext as MainWindowViewModel;
             vm.HiddenTheTaskBar(window);
-            vm.StartLockScreen();
+            vm.ImmediatelyLock();
+            vm.StartUp();
         }
     }
 }

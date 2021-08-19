@@ -27,6 +27,7 @@ namespace WindowScreen.Helpers
         {
             var options = new JsonSerializerOptions
             {
+                Encoder = JavaScriptEncoder.Create(UnicodeRanges.All),
                 PropertyNameCaseInsensitive = true,
                 WriteIndented = true
             };

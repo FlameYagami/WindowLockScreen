@@ -45,6 +45,20 @@ namespace WindowScreen.ViewModels
             StartLockScreen();
         }
 
+        public void ImmediatelyLock()
+        {
+            if (_setting.ImmediatelyLock)
+            {
+                StartLockScreen();
+            }
+        }
+        public void StartUp()
+        {
+            if (_setting.StartUp)
+            {
+                Helper.StartUpTheApp(true);
+            }
+        }
         public void StartLockScreen()
         {
             if (_setting.Accident)
